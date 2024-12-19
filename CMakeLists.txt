@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.6 FATAL_ERROR)
-cmake_policy(VERSION 3.6)
+cmake_minimum_required(VERSION 3.22 FATAL_ERROR)
+cmake_policy(VERSION 3.22)
 
 file(READ "glm/detail/setup.hpp" GLM_SETUP_FILE)
 string(REGEX MATCH "#define[ ]+GLM_VERSION_MAJOR[ ]+([0-9]+)" _ ${GLM_SETUP_FILE})
@@ -30,7 +30,7 @@ option(GLM_ENABLE_CXX_98 "Enable C++ 98" OFF)
 option(GLM_ENABLE_CXX_11 "Enable C++ 11" OFF)
 option(GLM_ENABLE_CXX_14 "Enable C++ 14" OFF)
 option(GLM_ENABLE_CXX_17 "Enable C++ 17" OFF)
-option(GLM_ENABLE_CXX_20 "Enable C++ 20" OFF)
+option(GLM_ENABLE_CXX_20 "Enable C++ 20" ON)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
